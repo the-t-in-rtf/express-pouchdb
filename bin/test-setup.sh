@@ -3,7 +3,7 @@
 # install pouchdb from git master rather than npm,
 # so we can run its own tests
 rm -fr node_modules/pouchdb
-git clone --single-branch --branch master --depth 1 \
+git clone --single-branch --branch master --depth 300 \
   https://github.com/pouchdb/pouchdb.git node_modules/pouchdb
 
 cd node_modules/pouchdb/
