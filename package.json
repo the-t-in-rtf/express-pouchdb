@@ -24,7 +24,7 @@
     "multiparty": "3.3.2",
     "node-uuid": "1.4.7",
     "on-finished": "2.3.0",
-    "pouchdb-all-dbs": "https://github.com/the-t-in-rtf/pouchdb-all-dbs.git#fdafd6b1f5f94914f1fea3641c62377dd70a43fc",
+    "pouchdb-all-dbs": "git://github.com/the-t-in-rtf/pouchdb-all-dbs.git#fdafd6b1f5f94914f1fea3641c62377dd70a43fc",
     "pouchdb-auth": "2.1.1",
     "pouchdb-find": "0.10.3",
     "pouchdb-list": "1.1.0",
