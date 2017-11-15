@@ -1,5 +1,4 @@
-node_modules
-test/testdata
+/node_modules
 testdb_*
 test_*
 _pouch_*
@@ -11,3 +10,6 @@ _users
 _replicator
 config.json
 log.txt
+/pouchdb
+/tmp
+pouchdb-tests

@@ -1,26 +1,20 @@
 #!/bin/bash
 
-# install pouchdb from git master rather than npm,
-# so we can run its own tests
-rm -fr node_modules/pouchdb
-git clone --single-branch --branch master \
-  https://github.com/pouchdb/pouchdb.git node_modules/pouchdb
+# Check out PouchDB itself from master and build it, so that we can
+# run its test suite.
+# Note: this will start to fail randomly if something changes in
+# PouchDB master. In those cases, just pin it to a specific Git commit.
 
-cd node_modules/pouchdb/
-git reset --hard c3b79b9
-npm install
-cd node_modules/pouchdb-server/node_modules
-rm -fr express-pouchdb
-ln -s ../../../../.. express-pouchdb
-cd ../../../../..
+DIRECTORY='pouchdb-tests'
 
-# link pouchdb-server back to us
-cd node_modules/pouchdb-server
+if [ ! -d "$DIRECTORY" ]; then
+  # Control will enter here if $DIRECTORY exists.
+  git clone --single-branch --branch master \
+    --depth 500 \
+    https://github.com/pouchdb/pouchdb.git ${DIRECTORY}
+fi
+
+cd pouchdb-tests
+git checkout 1ccf22988088273013a5954361f4f963f713a612
 npm install
-cd node_modules
-rm -fr express-pouchdb
-ln -s ../../.. express-pouchdb
-# link pouchdb-server's pouchdb to the master/master one
-rm -fr pouchdb
-ln -s ../../pouchdb pouchdb
-cd ../../..
+cd ..
