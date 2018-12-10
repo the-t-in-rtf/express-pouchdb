@@ -1,3 +1,5 @@
+*NOTE:*  This is a fork of an older repo that is no longer used in gpii-pouchdb.  You should look [at the new repo](https://github.com/the-t-in-rtf/pouchdb-server) instead.
+
 PouchDB Server [![Build Status](https://travis-ci.org/pouchdb/pouchdb-server.svg)](https://travis-ci.org/pouchdb/pouchdb-server)
 =====
 PouchDB Server is a drop-in replacement for CouchDB, using PouchDB and
